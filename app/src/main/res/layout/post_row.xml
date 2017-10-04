@@ -15,7 +15,7 @@
         android:adjustViewBounds="true"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:src="@color/cardview_dark_background"
+        android:src="@mipmap/add_btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
