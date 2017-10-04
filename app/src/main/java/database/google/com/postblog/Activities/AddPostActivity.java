@@ -124,6 +124,7 @@ startPosting();
 
                     newPost.setValue(dataToSave);
                     mProgress.dismiss();
+                    //go
 
                 }
             });
