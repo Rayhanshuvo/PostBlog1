@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="database.google.com.postblog.AddPostActivity">
+    tools:context="database.google.com.postblog.Activities.AddPostActivity">
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="361dp"
+        android:background="@mipmap/add_btn"
         android:layout_height="191dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
@@ -22,7 +23,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026"
-        app:srcCompat="@mipmap/add_btn"
+
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp" />
 
