@@ -40,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
         email=(EditText) findViewById(R.id.editText);
         password=(EditText) findViewById(R.id.editText2);
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,CreateAccountActivity.class));
+                finish();
+            }
+        });
+
         mAuth=FirebaseAuth.getInstance();
         mAuthListener=new FirebaseAuth.AuthStateListener() {
             @Override

@@ -15,18 +15,18 @@
         android:adjustViewBounds="true"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:src="@mipmap/add_btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/postTitleList"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:padding="10dp"
-        android:text="postTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="postTitle"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
 
         />
 
@@ -35,6 +35,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="10dp"
+        android:textAlignment="center"
         android:text="post Description here"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,7 +45,8 @@
     <TextView
         android:id="@+id/timestamp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
+        android:textAlignment="center"
         android:text="TextView" />
 </LinearLayout>
 

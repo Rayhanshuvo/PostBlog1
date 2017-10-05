@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.Date;
 import java.util.List;
 
@@ -49,6 +51,9 @@ public class BlogRecyclerAdapter extends RecyclerView.Adapter<BlogRecyclerAdapte
 
         imageUrl=blog.getImage();
         //use picasso library to load image
+        Picasso.with(context)
+                .load(imageUrl)
+                .into(holder.image);
 
     }
 

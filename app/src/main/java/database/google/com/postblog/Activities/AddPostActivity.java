@@ -51,7 +51,7 @@ public class AddPostActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         mUser=mAuth.getCurrentUser();
         mStorage= FirebaseStorage.getInstance().getReference();
-        mPostDatabase= FirebaseDatabase.getInstance().getReference().child("Blog");
+        mPostDatabase= FirebaseDatabase.getInstance().getReference().child("MBlog");
 
         mPostImage=(ImageButton)findViewById(R.id.imageButton);
         mPostTitle=(EditText)findViewById(R.id.editText3);
@@ -98,16 +98,7 @@ startPosting();
         final String descVal=mPostDesc.getText().toString().trim();
 
         if(!TextUtils.isEmpty(titleVal)&& !TextUtils.isEmpty(descVal)){
-//start the uploading
 
-           // Blog blog=new Blog("Title","description","imageUrl","timestamp","userid");
-            //mPostDatabase.setValue(blog).addOnSuccessListener(new OnSuccessListener<Void>() {
-              //  @Override
-               // public void onSuccess(Void aVoid) {
-                 //   Toast.makeText(getApplicationContext(),"Item added",Toast.LENGTH_SHORT);
-                   // mProgress.dismiss();
-                //}
-            //});
 
             StorageReference filepath=mStorage.child("MBlog_Image").child(mImageUri.getLastPathSegment());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -125,6 +116,8 @@ startPosting();
                     newPost.setValue(dataToSave);
                     mProgress.dismiss();
                     //go
+                    startActivity(new Intent(AddPostActivity.this,PostListActivity.class));
+                    finish();
 
                 }
             });
