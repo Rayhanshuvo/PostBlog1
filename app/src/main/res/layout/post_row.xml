@@ -9,9 +9,11 @@
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@mipmap/download"
     android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/postImageList"
+
         android:adjustViewBounds="true"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
